@@ -40,7 +40,7 @@ class App extends Component {
   }
 
   addNewItem(item) {
-    console.log(item);
+    console.log('parent',item);
   }
 
   saveItems(items) {
@@ -53,17 +53,9 @@ class App extends Component {
     return (
 
       <div className="wrapper">
-
         <h2>YOUR FAVOURITES</h2>
-
         <ItemList items={this.state.items} handleChange={this.toggleFav} />
-
         <AddItem handleNewItem={this.addNewItem} />
-        <form className="add-items" autoComplete="off">
-          <input type="text" name="item" placeholder="Item Name" required />
-          <input type="submit" value="+ Add Item" />
-        </form>
-
       </div>
 
     );
